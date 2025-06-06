@@ -1,0 +1,25 @@
+import java.io.*; 
+importjava.util.*; 
+importjavax.servlet.*; 
+importjavax.servlet.http.*; 
+public class week9demo extends GenericServlet 
+{ 
+public void service(ServletRequestreq,ServletResponse res) throws IOException, ServletException 
+{ 
+res.setContentType("text/html"); 
+PrintWriter out=res.getWriter(); 
+Date d=new Date(); 
+out.println("<h1> Server Date is"+d+"</h1>"); 
+}    } 
+Web.xml: 
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+<web-app> 
+<servlet> 
+<servlet-name>week9demo</servlet-name> 
+<servlet-class>week9demo</servlet-class> 
+</servlet> 
+<servlet-mapping> 
+<servlet-name>week9demo</servlet-name> 
+<url-pattern>/ani</url-pattern> 
+</servlet-mapping> 
+</web-app>
